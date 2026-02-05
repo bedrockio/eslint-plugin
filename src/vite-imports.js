@@ -27,6 +27,7 @@ export default {
   },
   settings: {
     'import/resolver': {
+      exports: true,
       vite: {
         viteConfig,
       },
