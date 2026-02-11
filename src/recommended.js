@@ -3,7 +3,7 @@ import globals from 'globals';
 
 export default {
   files: ['**/*.{js,jsx,ts,tsx}'],
-  ignores: ['node_modules/**/*', 'dist/**/*', 'docs/**/*', '**/*.d.ts'],
+  ignores: ['node_modules/**/*', 'dist/**/*', '**/*.d.ts'],
   languageOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
