@@ -1,17 +1,23 @@
 import path from 'path';
 import * as plugin from 'eslint-plugin-import';
 import importRules from './importRules.js';
+import { existsSync } from 'fs';
 
-let viteConfig;
-
-try {
+async function loadConfig() {
   const file = path.join(process.cwd(), 'vite.config.js');
-  const { default: config } = await import(file);
-  viteConfig = config;
-} catch {
-  // Config file does not exist or
-  // top-level await not supported.
+
+  if (!existsSync(file)) {
+    // This file will be imported from index.js so
+    // bail if no vite.config.js file exists.
+    return;
+  }
+
+  const module = await import(file);
+
+  return module.default;
 }
+
+const viteConfig = await loadConfig();
 
 export default {
   ...plugin.flatConfigs.recommended,
