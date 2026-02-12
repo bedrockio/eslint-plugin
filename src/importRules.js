@@ -39,7 +39,7 @@ export default {
           group: 'internal',
         },
         {
-          pattern: '+(utils|@utils){,/**}',
+          pattern: '+(hooks|@hooks|utils|@utils){,/**}',
           group: 'internal',
           position: 'after',
         },
