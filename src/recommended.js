@@ -2,8 +2,8 @@ import js from '@eslint/js';
 import globals from 'globals';
 
 export default {
-  files: ['**/*.{js,jsx,ts,tsx}'],
-  ignores: ['node_modules/**/*', 'dist/**/*', '**/*.d.ts'],
+  files: ['**/*.{js,jsx}'],
+  ignores: ['node_modules/**/*', '**/dist/**/*', '**/*.d.ts'],
   languageOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',

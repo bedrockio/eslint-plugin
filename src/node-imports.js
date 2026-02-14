@@ -4,7 +4,7 @@ import importRules from './importRules.js';
 export default {
   ...plugin.flatConfigs.recommended,
   files: ['**/*.{js,jsx}'],
-  ignores: ['node_modules/**/*', 'dist/**/*', '**/*.d.ts'],
+  ignores: ['node_modules/**/*', '**/dist/**/*', '**/*.d.ts'],
   languageOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',

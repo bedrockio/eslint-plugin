@@ -3,7 +3,7 @@ import * as mdx from 'eslint-plugin-mdx';
 const plugin = {
   ...mdx.flat,
   files: ['**/*.mdx'],
-  ignores: ['node_modules/**/*', 'dist/**/*', '**/*.d.ts'],
+  ignores: ['node_modules/**/*', '**/dist/**/*', '**/*.d.ts'],
   processor: mdx.createRemarkProcessor({
     lintCodeBlocks: true,
   }),
