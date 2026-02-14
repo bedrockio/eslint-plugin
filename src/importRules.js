@@ -48,6 +48,16 @@ export default {
           group: 'sibling',
           position: 'after',
         },
+        {
+          pattern: '**/*.+(css|less|scss|png|jpg|svg|json)',
+          group: 'type',
+          position: 'after',
+        },
+        {
+          pattern: './**/*.+(css|less|scss|png|jpg|svg|json)',
+          group: 'type',
+          position: 'after',
+        },
       ],
     },
   ],
