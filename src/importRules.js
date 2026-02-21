@@ -6,6 +6,7 @@ export default {
     'warn',
     {
       'newlines-between': 'always-and-inside-groups',
+      sortTypesGroup: true,
       alphabetize: {
         order: 'asc',
         caseInsensitive: false,
