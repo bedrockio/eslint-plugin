@@ -29,6 +29,5 @@ export default {
     ...ts?.plugin.configs.recommended.rules,
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/no-floating-promises': 'error',
   },
 };
