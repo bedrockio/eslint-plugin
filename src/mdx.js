@@ -2,6 +2,7 @@ import * as mdx from 'eslint-plugin-mdx';
 
 const plugin = {
   ...mdx.flat,
+  name: 'mdx',
   files: ['**/*.mdx'],
   ignores: ['node_modules/**/*', '**/dist/**/*', '**/*.d.ts'],
   processor: mdx.createRemarkProcessor({
@@ -9,8 +10,9 @@ const plugin = {
   }),
   rules: {
     ...mdx.flat.rules,
-    semi: 'off',
-    'no-undef': 'off',
+    // Note this seems to be causing
+    // issues in the resolve so disable it.
+    'import/named': 'off',
     'no-unused-expressions': 'off',
   },
 };

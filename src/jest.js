@@ -2,8 +2,7 @@ import plugin from 'eslint-plugin-jest';
 
 export default {
   ...plugin.configs['flat/recommended'],
-
-  files: ['**/*.{js,jsx,ts,tsx}'],
+  name: 'jest',
   files: [
     '**/test*/**/*.{js,jsx,ts,tsx}',
     '**/__tests__/**/*.{js,jsx,ts,tsx}',

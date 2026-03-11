@@ -1,33 +1,30 @@
-let ts;
-let importError;
-
-try {
-  // This is to make this package optional.
-  ts = await import('typescript-eslint');
-} catch (err) {
-  // Package not installed. Capture error to
-  // allow re-throwing if plugin is accessed,
-  // otherwise allow it to export silently.
-  importError = err;
-}
+import ts from 'typescript-eslint';
 
 export default {
+  name: 'typescript',
   files: ['**/*.{ts,tsx}'],
   ignores: ['node_modules/**/*', '**/dist/**/*', '**/*.d.ts'],
   languageOptions: {
-    parser: ts?.parser,
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    parser: ts.parser,
   },
-  get plugins() {
-    if (importError) {
-      throw importError;
-    }
-    return {
-      '@typescript-eslint': ts?.plugin,
-    };
+  plugins: {
+    '@typescript-eslint': ts.plugin,
   },
   rules: {
-    ...ts?.plugin.configs.recommended.rules,
+    // Pull in `eslint-recommended` adjustments from typescript-eslint.
+    // This disables core ESLint rules that conflict with TypeScript (e.g. no-undef).
+    ...ts.plugin.configs['eslint-recommended'].overrides[0].rules,
+
+    // Pull in the TypeScript recommended rules themselves.
+    // Avoid the flat config version as it's an array.
+    ...ts.plugin.configs.recommended.rules,
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-explicit-any': 'off',
+
+    // The above configs try to slip this rule in there despite it
+    // not being part of eslint-recommended so force it off again.
+    'prefer-const': 'off',
   },
 };

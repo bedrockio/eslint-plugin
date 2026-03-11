@@ -1,17 +1,15 @@
-import * as plugin from 'eslint-plugin-import';
-import importRules from './importRules.js';
+import globals from 'globals';
 
 export default {
-  ...plugin.flatConfigs.recommended,
-  files: ['**/*.{js,jsx,ts,tsx}'],
+  name: 'webpack',
+  files: ['**/*.{js,jsx,ts,tsx,mdx}'],
   ignores: ['node_modules/**/*', '**/dist/**/*', '**/*.d.ts'],
   languageOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
+    globals: globals.browser,
   },
   rules: {
-    ...plugin.flatConfigs.recommended.rules,
-    ...importRules,
     'import/no-unresolved': [
       'warn',
       {
