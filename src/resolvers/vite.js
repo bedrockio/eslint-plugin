@@ -139,7 +139,15 @@ function resolveImport(source, file, config) {
     return { found: false };
   }
 
-  const defaultExtensions = ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json'];
+  const defaultExtensions = [
+    '.mjs',
+    '.js',
+    '.ts',
+    '.d.ts',
+    '.jsx',
+    '.tsx',
+    '.json',
+  ];
   const viteResolve = viteConfig.resolve || {};
   const extensions = viteResolve.extensions || defaultExtensions;
   const resolveOptions = {
