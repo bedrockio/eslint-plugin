@@ -20,6 +20,7 @@ export default {
     'no-console': 'warn',
     'react/prop-types': 'off',
     'react/display-name': 'off',
+    'react/jsx-no-target-blank': 'off',
     'react/no-unescaped-entities': [
       'error',
       {
