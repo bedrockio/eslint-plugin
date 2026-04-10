@@ -5,9 +5,6 @@ const plugin = {
   name: 'mdx',
   files: ['**/*.mdx'],
   ignores: ['node_modules/**/*', '**/dist/**/*', '**/*.d.ts'],
-  processor: mdx.createRemarkProcessor({
-    lintCodeBlocks: true,
-  }),
   rules: {
     ...mdx.flat.rules,
     // Note this seems to be causing
@@ -16,9 +13,5 @@ const plugin = {
     'no-unused-expressions': 'off',
   },
 };
-
-Object.defineProperty(plugin, 'codeBlocks', {
-  value: mdx.flatCodeBlocks,
-});
 
 export default plugin;
