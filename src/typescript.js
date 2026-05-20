@@ -31,6 +31,12 @@ export default {
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-explicit-any': 'off',
 
+    // typescript-eslint's eslint-recommended turns this off assuming the TS
+    // compiler will report ts(7027), but tsc only flags it when
+    // `allowUnreachableCode: false` is set in tsconfig. Re-enable so lint
+    // catches it regardless of project tsconfig.
+    'no-unreachable': 'error',
+
     // The above configs try to slip this rule in there despite it
     // not being part of eslint-recommended so force it off again.
     'prefer-const': 'off',
