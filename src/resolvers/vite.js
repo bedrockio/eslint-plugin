@@ -24,6 +24,9 @@ import path from 'node:path';
 import resolve from 'resolve';
 import createDebug from 'debug';
 import { existsSync } from 'node:fs';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
 
 const namespace = 'eslint-plugin-import:resolver:vite';
 const log = createDebug(namespace);

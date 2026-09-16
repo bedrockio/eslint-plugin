@@ -1,7 +1,7 @@
 # @bedrockio/eslint-plugin
 
 Common ESLint plugin for Bedrock projects. Note that this package uses flat
-config new to ESLint v9.
+config new to ESLint v10.
 
 - [Install](#install)
   - [Webpack](#webpack)
@@ -78,10 +78,10 @@ a project is a pain. To make it work nicely add this to your project:
     // Makes package imports behave better.
     "module": "nodenext",
     // Helps with some commonjs modules.
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
   },
   // Skip parsing useless files.
-  "exclude": ["dist", "build", "node_modules"]
+  "exclude": ["dist", "build", "node_modules"],
 }
 ```
 
