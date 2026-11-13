@@ -8,7 +8,7 @@ const plugin = {
     ...mdx.flat.rules,
     // Note this seems to be causing
     // issues in the resolve so disable it.
-    'import/named': 'off',
+    'import-x/named': 'off',
     'no-unused-expressions': 'off',
   },
 };

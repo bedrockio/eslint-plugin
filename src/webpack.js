@@ -9,7 +9,7 @@ export default {
     globals: globals.browser,
   },
   rules: {
-    'import/no-unresolved': [
+    'import-x/no-unresolved': [
       'warn',
       {
         // package.json "style" may be used here which
@@ -20,7 +20,7 @@ export default {
     ],
   },
   settings: {
-    'import/resolver': {
+    'import-x/resolver': {
       webpack: {
         config: './webpack.config.js',
       },

@@ -1,4 +1,4 @@
-import * as plugin from 'eslint-plugin-import';
+import * as plugin from 'eslint-plugin-import-x';
 
 export default {
   ...plugin.flatConfigs.recommended,
@@ -9,11 +9,11 @@ export default {
   },
   rules: {
     ...plugin.flatConfigs.recommended.rules,
-    'import/namespace': 'off',
-    'import/no-unresolved': 'warn',
-    'import/no-named-as-default-member': 'off',
-    'import/first': 'warn',
-    'import/order': [
+    'import-x/namespace': 'off',
+    'import-x/no-unresolved': 'warn',
+    'import-x/no-named-as-default-member': 'off',
+    'import-x/first': 'warn',
+    'import-x/order': [
       'warn',
       {
         'newlines-between': 'always-and-inside-groups',

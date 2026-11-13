@@ -9,7 +9,7 @@ export default {
     globals: globals.browser,
   },
   settings: {
-    'import/resolver': {
+    'import-x/resolver': {
       exports: true,
       ['@bedrockio/eslint-plugin/resolvers/vite']: {
         config: './vite.config.js',

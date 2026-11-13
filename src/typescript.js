@@ -12,7 +12,7 @@ export default {
     '@typescript-eslint': ts.plugin,
   },
   settings: {
-    'import/resolver': {
+    'import-x/resolver': {
       typescript: {
         alwaysTryTypes: true,
       },

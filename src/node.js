@@ -11,7 +11,7 @@ export default {
     globals: globals.node,
   },
   settings: {
-    'import/resolver': {
+    'import-x/resolver': {
       exports: true,
       node: {
         moduleDirectory: ['node_modules', 'src'],
