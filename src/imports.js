@@ -3,7 +3,6 @@ import * as plugin from 'eslint-plugin-import';
 export default {
   ...plugin.flatConfigs.recommended,
   name: 'imports',
-  ignores: ['node_modules/**/*', '**/dist/**/*', '**/*.d.ts'],
   languageOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',

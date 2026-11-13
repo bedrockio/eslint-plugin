@@ -1,3 +1,4 @@
+import { default as ignores } from './ignores.js';
 import { default as recommended } from './recommended.js';
 import { default as react } from './react.js';
 import { default as jest } from './jest.js';
@@ -18,4 +19,5 @@ export {
   imports,
   typescript,
   recommended,
+  ignores,
 };

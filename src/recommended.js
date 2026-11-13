@@ -2,7 +2,6 @@ import js from '@eslint/js';
 
 export default {
   name: 'recommended',
-  ignores: ['node_modules/**/*', '**/dist/**/*', '**/*.d.ts'],
   languageOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',

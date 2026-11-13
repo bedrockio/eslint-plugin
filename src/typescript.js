@@ -3,7 +3,6 @@ import ts from 'typescript-eslint';
 export default {
   name: 'typescript',
   files: ['**/*.{ts,tsx}'],
-  ignores: ['node_modules/**/*', '**/dist/**/*', '**/*.d.ts'],
   languageOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',

@@ -3,7 +3,6 @@ import globals from 'globals';
 export default {
   name: 'webpack',
   files: ['**/*.{js,jsx,ts,tsx,mdx}'],
-  ignores: ['node_modules/**/*', '**/dist/**/*', '**/*.d.ts'],
   languageOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',

@@ -4,7 +4,6 @@ const plugin = {
   ...mdx.flat,
   name: 'mdx',
   files: ['**/*.mdx'],
-  ignores: ['node_modules/**/*', '**/dist/**/*', '**/*.d.ts'],
   rules: {
     ...mdx.flat.rules,
     // Note this seems to be causing
