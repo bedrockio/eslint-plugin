@@ -29,6 +29,10 @@ export default {
     '@eslint-react/no-children-map': 'off',
     '@eslint-react/no-children-for-each': 'off',
     '@eslint-react/no-children-count': 'off',
+    '@eslint-react/purity': 'off',
+    '@eslint-react/no-access-state-in-setstate': 'off',
+    '@eslint-react/no-set-state-in-component-did-mount': 'off',
+    '@eslint-react/no-set-state-in-component-did-update': 'off',
     '@eslint-react/use-state': [
       'warn',
       {
